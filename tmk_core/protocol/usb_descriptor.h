@@ -45,9 +45,9 @@
 #define _DESCRIPTORS_H_
 
 #include <LUFA/Drivers/USB/USB.h>
-#ifdef PROTOCOL_CHIBIOS
-#include "hal.h"
-#endif
+//#ifdef PROTOCOL_CHIBIOS
+//#include "hal.h"
+//#endif
 
 typedef struct
 {
