@@ -246,6 +246,7 @@ ifeq ($(NRFSDK_VER), 12)
     # keep every function in separate section, this allows linker to discard unused ones
     NRFCFLAGS += -ffunction-sections -fdata-sections -fno-strict-aliasing
     NRFCFLAGS += -fno-builtin --short-enums 
+    NRFCFLAGS += -std=gnu99
 
     # C++ flags common to all targets
     CXXFLAGS += \
@@ -359,6 +360,8 @@ ifeq ($(NRFSDK_VER), 12)
     # keep every function in separate section, this allows linker to discard unused ones
     NRFCFLAGS += -ffunction-sections -fdata-sections -fno-strict-aliasing
     NRFCFLAGS += -fno-builtin --short-enums 
+    NRFCFLAGS += -std=gnu99
+
 
     # C++ flags common to all targets
     CXXFLAGS += \
@@ -802,6 +805,7 @@ BIN = $(OBJCOPY) -O binary
 #COMPILEFLAGS += $(THUMBFLAGS)
 
 NRFCFLAGS += $(COMPILEFLAGS)
+NRFCFLAGS += -std=gnu99
 
 #ASFLAGS += $(THUMBFLAGS)
 
