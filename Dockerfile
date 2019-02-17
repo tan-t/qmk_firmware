@@ -20,14 +20,16 @@ RUN apt-get update && apt-get install --no-install-recommends -y build-essential
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-RUN curl -o /tmp/nrf_sdk.zip https://developer.nordicsemi.com/nRF5_SDK/nRF5_SDK_v15.x.x/nRF5_SDK_15.0.0_a53641a.zip \
-  && unzip /tmp/nrf_sdk.zip -d /dev/nrf \
-  && rm /tmp/nrf_sdk.zip
+#RUN curl -o /tmp/nrf_sdk.zip https://developer.nordicsemi.com/nRF5_SDK/nRF5_SDK_v15.x.x/nRF5_SDK_15.0.0_a53641a.zip \
+#  && unzip /tmp/nrf_sdk.zip -d /dev/nrf \
+#  && rm /tmp/nrf_sdk.zip
 
 ENV keyboard=helix_ble
 ENV keymap=default
+ENV subproject=master
+VOLUME /dev/nrf
 ENV NRFSDK15_ROOT=/dev/nrf
 
 VOLUME /qmk
 WORKDIR /qmk
-CMD make clean ; make helix_ble:default
+CMD make clean ; make keyboard=${keyboard} subproject=${subproject} keymap=${keymap}
