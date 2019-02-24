@@ -1,9 +1,9 @@
 
-DEFAULT_FOLDER = helix_ble/master
+DEFAULT_FOLDER = helix_ble/slave
 
 NRF_DEBUG = no
 
-RGBLIGHT_ENABLE = yes
+RGBLIGHT_ENABLE = no
 MOUSEKEY_ENABLE = yes	# Mouse keys
 EXTRAKEY_ENABLE = yes	# Audio control and System control
 CONSOLE_ENABLE = yes	# Console for debug

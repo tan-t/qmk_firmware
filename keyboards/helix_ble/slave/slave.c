@@ -43,8 +43,8 @@ void matrix_init_user() {
 }
 
 void matrix_scan_user() {
- static int cnt;
- if (bootloader_flag && cnt++==500) {
-   bootloader_jump();
- }
+//  static int cnt;
+//  if (bootloader_flag && cnt++==500) {
+//    bootloader_jump();
+//  }
 }
