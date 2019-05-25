@@ -1,3 +1,3 @@
-BACKLIGHT_ENABLE = no
-
-MOUSEKEY_ENABLE = yes       # Mouse keys(+4700)
+SRC += rev1/matrix.c
+SRC += rev1/split_util.c
+SRC += rev1/split_scomm.c
