@@ -47,7 +47,7 @@ extern "C" {
 
 //#include "nrf_gpio.h"
 
-#define GPIO(port, pin) ((port << 6) | pin)
+#define GPIO(port, pin) ((port << 5) | pin)
 #define PIN1 GPIO(0,8)
 #define PIN2 GPIO(0,11)
 #define PIN5 GPIO(0,18)
@@ -67,6 +67,7 @@ extern "C" {
 #define PIN18 GPIO(0,30)
 #define PIN19 GPIO(0,0)
 #define PIN20 GPIO(0,5)
+#define BOOTPIN GPIO(0,7)
 //#define NRF_LOG_ENABLED 0
 //#define NRF_LOG_BACKEND_SERIAL_USES_UART 0
 //#define NRF_LOG_BACKEND_SERIAL_UART_TX_PIN 5
