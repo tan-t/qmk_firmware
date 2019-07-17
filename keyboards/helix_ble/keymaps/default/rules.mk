@@ -1,10 +1,10 @@
 
 # Helix keyboard customize
 # you can edit following Variables
-HELIX_ROWS = 5              # Helix Rows is 4 or 5
-LED_BACK_ENABLE = yes        # LED backlight (Enable WS2812 RGB underlight.)
+HELIX_ROWS = 4              # Helix Rows is 4 or 5
+LED_BACK_ENABLE = no        # LED backlight (Enable WS2812 RGB underlight.)
 LED_UNDERGLOW_ENABLE = no   # LED underglow (Enable WS2812 RGB underlight.)
-LED_ANIMATIONS = yes        # LED animations
+LED_ANIMATIONS = no        # LED animations
 
 define HELIX_CUSTOMISE_MSG
   $(info Helix customize)
